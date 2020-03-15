@@ -1,0 +1,22 @@
+# "#" で始まる行はコメント
+# (例)exe ファイルは要らない
+# (例)*.exe
+# (例)bin フォルダは要らない
+# (例)bin/
+# (例)nuget.exe は必用なファイル
+# (例)!/.nuget/nuget.exe
+# (例) パッケージフォルダ内の .ts ファイルは要らない
+# (例)package/**/*.ts
+
+# default
+node_modules
+.vscode
+.DS_Store
+Thumbs.db
+
+# Logs
+yarn-debug.log*
+yarn-error.log*
+
+# etc
+dist/

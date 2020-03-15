@@ -1,0 +1,48 @@
+{
+  "name": "glup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-connect": "^5.6.1",
+    "gulp-pug": "^4.0.1",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "npm": "^6.6.0"
+  },
+  "devDependencies": {
+    "connect-ssi": "^1.1.1",
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-convert-encoding": "^2.0.1",
+    "gulp-cr-lf-replace": "0.0.4",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-frontnote": "^2.0.1",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1",
+    "require-dir": "^1.1.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-stream": "^5.1.1"
+  }
+}
