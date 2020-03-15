@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title ここは自由space
-        link(rel='stylesheet', href="style.css")
-    body
-        header
-            
+extends include/_temp
+block title
+  title FFi
+block meta
+  meta(name='keywords', content='FFi')
+  meta(name='description', content='FFiについての説明文をこちら')
+block css
+  link(rel="stylesheet", href="/css/style.css")
+block js
+  script(src="/js/main.js" defer)
+block contents
+  div ここは
+    br
+    | コンテンツ
