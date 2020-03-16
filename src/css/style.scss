@@ -1,8 +1,265 @@
+// 変数定義
+@import "../include/variable";
+
+// animation
+.target {
+  opacity: 0;
+  transition: 1s;
+}
+.is-animation {
+  opacity: 1;
+}
+
 // header
 @import "../include/header";
 
 // content
+.mv {
+  background: url("#{$imgPath}mv.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  &_inr {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &_heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    &_logo {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 1s ease-in,transform .5s ease-in;
+      &.is-active {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    &_generic_name {
+      display: block;
+      margin-top: 30px;
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      line-height: 1.8;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 1s ease;
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+  &_ani {
+    width: 450px;
+    height: 450px;
+    border: 5px solid #fff;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotate(0deg);
+    &.no2 {
+      transform: rotate(-90deg);
+      transition: transform 2s ease-in;
+    }
+    &.no3 {
+      transform: rotate(-135deg);
+      transition: transform 2.2s ease-in;
+    }
+    &.no2.is-active {
+      transform: rotate(45deg);
+    }
+    &.no3.is-active {
+      transform: rotate(67.5deg);
+    }
+  }
+}
 
+.main {
+  width: 1100px;
+  margin: 60px auto 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &_left {
+    width: 225px;
+    &_logo {
+      width: 200px;
+      margin: 0 auto;
+    }
+    &_nav {
+      margin-top: 40px;
+    }
+    &_li {
+      &:nth-child(n+2) {
+        margin-top: 1em;
+      }
+    }
+    &_a {
+      display: block;
+      padding: 15px 0 10px 40px;
+      font-size: 22px;
+      &.is-active {
+        border-bottom: 5px solid #3e65c2;
+      }
+      &.anchor_ffi {
+        background: url("#{$imgPath}icon_ffi.jpg") no-repeat;
+        background-size: 25px;
+        background-position: center left 5px;
+      }
+      &.anchor_member {
+        background: url("#{$imgPath}icon_member.jpg") no-repeat;
+        background-size: 25px;
+        background-position: center left 5px;
+      }
+      &.anchor_history {
+        background: url("#{$imgPath}icon_history.jpg") no-repeat;
+        background-size: 25px;
+        background-position: center left 5px;
+      }
+      &.anchor_order {
+        background: url("#{$imgPath}icon_order.jpg") no-repeat;
+        background-size: 25px;
+        background-position: center left 5px;
+      }
+      &.anchor_contact {
+        background: url("#{$imgPath}icon_contact.jpg") no-repeat;
+        background-size: 25px;
+        background-position: center left 5px;
+      }
+    }
+  }
+  &_right {
+    width: 825px;
+    &_heading {
+      &_wrap {
+        text-align: center;
+      }
+      display: inline-block;
+      padding: 30px;
+      border: 1px solid #000;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
+      text-align: center;
+      &_bottom_p {
+        margin-top: 60px;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 2;
+        text-align: center;
+      }
+    }
+    &_skillset {
+      margin-top: 60px;
+      &_inr {
+        display: flex;
+        justify-content: space-between;
+      }
+      &_col {
+        width: 46%;
+        margin-left: 15px;
+        padding: 0 15px 15px 15px;
+        position: relative;
+        &::before {
+          content: '';
+          width: 2px;
+          height: 0;
+          background: #000;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: height .6s;
+          transition-delay: .8s;
+        }
+        &.target {
+          opacity: 1;
+          &.is-animation {
+            &::before {
+              height: 100%;
+            }
+          }
+        }
+      }
+      &_heading {
+        margin-left: -30px;
+        padding: 15px 0 15px 70px;
+        font-size: 20px;
+        letter-spacing: 0.03em;
+        line-height: 1.4;
+        position: relative;
+        &.web_design {
+          background: url(#{$imgPath}icon_design.jpg) no-repeat;
+          background-size: 25px;
+          background-position: center left 30px;
+        }
+        &.coding {
+          background: url(#{$imgPath}icon_history.jpg) no-repeat;
+          background-size: 25px;
+          background-position: center left 30px;
+        }
+        &::before {
+          content: '';
+          width: 0;
+          height: 2px;
+          background: #000;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: width .6s;
+        }
+        &::after {
+          content: '';
+          width: 0;
+          height: 2px;
+          background: #000;
+          transform: rotate(45deg);
+          position: absolute;
+          right: -5px;
+          bottom: 10.5px;
+          transition: width .6s;
+          transition-delay: .6s;
+        }
+        &.target {
+          opacity: 1;
+          &.is-animation {
+            &::before {
+              width: 100%;
+            }
+            &::after {
+              width: 30px;
+            }
+          }
+        }
+      }
+      &_p {
+        &_inr {
+          margin-left: -30px;
+          padding: 15px 15px 0 30px;
+        }
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        line-height: 1.8;
+        &:nth-child(n+2) {
+          margin-top: 1.5em;
+        }
+      }
+    }
+  }
+}
 
 // footer
 @import "../include/footer";
