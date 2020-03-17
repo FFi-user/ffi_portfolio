@@ -11,7 +11,7 @@ block css
   link(rel="stylesheet", href="/css/style.css")
 block js
   script(src="/js/main.js" defer)
-  //- script(src="/js/sidebar_fixed.js" defer)
+  script(src="/js/sidebar_fixed.js" defer)
 block contents
   section.mv.js_mv_height
     .mv_inr
@@ -28,36 +28,41 @@ block contents
       .mv_ani.no2
       .mv_ani.no3
 
-  main.main(style="height:2000px")
-    .main_left.js-fixed-target-content
+  // main
+  main.main(style="height: 4000px")
+    // main_left
+    .main_left.js_fixed_target_content
       .main_left_inr
         .main_left_logo
           img(src= imgPath + "logo_ffi_bl.png", alt="FFi")
         nav.main_left_nav
           ul.main_left_ul
             li.main_left_li
-              a.main_left_a.anchor_ffi.is-active(href="") FFiとは
+              a.main_left_a.anchor_ffi(href="#ffi") FFiとは
             li.main_left_li
-              a.main_left_a.anchor_member(href="") メンバー
+              a.main_left_a.anchor_member(href="#member") メンバー
             li.main_left_li
-              a.main_left_a.anchor_history(href="") 過去作品
+              a.main_left_a.anchor_history(href="#past_works") 過去作品
             li.main_left_li
-              a.main_left_a.anchor_order(href="") ご依頼について
+              a.main_left_a.anchor_order(href="#about_order") ご依頼について
             li.main_left_li
-              a.main_left_a.anchor_contact(href="") お問い合わせ
-    section.main_right.js-main-content
+              a.main_left_a.anchor_contact(href="#contact") お問い合わせ
+    // end main_left
+    // main_right
+    section.main_right.js_main_content
       .main_right_inr
-        section
+        // section
+        section#ffi.section
           .main_right_heading_wrap
             h2.main_right_heading.noto_serif FFi
               br
               | とは？
-          p.main_right_heading_bottom_p “FFi”とは
+          p.main_right_heading_bottom_p.target “FFi”とは
             span.large F
             | reelance
             span.large  F
             | ront-end
-            span.large i
+            span.large  i
             | nnovation(フリーランス・フロントエンド・イノベーション)の略。
             br
             | “個人で自由に動き回るフロントエンドエンジニア”を志す若手技術者のチームです。
@@ -73,45 +78,155 @@ block contents
             | 色んな方からのホームページ制作のご依頼やご要望を満たすことができるのでは？」
             br
             | そんな動機で、会社のようだけど会社ではない、ひとつのチームとして走り始めました。
-        .main_right_skillset
-          .main_right_skillset_inr
-            .main_right_skillset_col.target
-              h3.main_right_skillset_heading.noto_serif.web_design.target webデザイン
-              .main_right_skillset_p_inr
-                p.main_right_skillset_p なんとなくのデザインからの卒業。
-                  br
-                  | お客様とのやり取りから真のニーズ
-                  br
-                  | を洗い出します。
-                  br
-                  | また、
-                  br
-                  | デザインの理論や知識を踏まえ、
-                  br
-                  | 目的達成を見据えた
-                  br
-                  | Webデザインを制作を致します。
-                p.main_right_skillset_p 使用ツール：
-                  br
-                  | Photoshop, Illustrator, XD,Animate, FireAlpaca ...etc.
-                  br
-                  | (今後さらに増えていきます)
-            .main_right_skillset_col.target
-              h3.main_right_skillset_heading.noto_serif.coding.target コーディング
-              .main_right_skillset_p_inr
-                p.main_right_skillset_p ホームページの制作を
-                  br
-                  | 得意としています。
-                  br
-                  | 「検索したら上の方に出てくる
-                  br
-                  | ランディング・ページを作りたい」
-                  br
-                  | 「WordPressを使ったサイトがいい」
-                  br
-                  | 「魅力的なアニメーションを…」など、まずは何でもご相談下さい。
-                p.main_right_skillset_p スキルセット：
-                  br
-                  | HTML, CSS, Java Script, PHP, Sass,
-                  br
-                  | Pug, Bootstrap, jQuery, gulp  ...etc.(今後さらに増えていきます)
+          .skillset
+            .skillset_inr
+              .skillset_col.target
+                h3.skillset_heading.noto_serif.web_design.target webデザイン
+                .skillset_p_inr.target
+                  p.skillset_p なんとなくのデザインからの卒業。
+                    br
+                    | お客様とのやり取りから真のニーズ
+                    br
+                    | を洗い出します。
+                    br
+                    | また、
+                    br
+                    | デザインの理論や知識を踏まえ、
+                    br
+                    | 目的達成を見据えた
+                    br
+                    | Webデザインを制作を致します。
+                  p.skillset_p 使用ツール：
+                    br
+                    | Photoshop, Illustrator, XD,Animate, FireAlpaca ...etc.
+                    br
+                    | (今後さらに増えていきます)
+              .skillset_col.target
+                h3.skillset_heading.noto_serif.coding.target コーディング
+                .skillset_p_inr.target
+                  p.skillset_p ホームページの制作を
+                    br
+                    | 得意としています。
+                    br
+                    | 「検索したら上の方に出てくる
+                    br
+                    | ランディング・ページを作りたい」
+                    br
+                    | 「WordPressを使ったサイトがいい」
+                    br
+                    | 「魅力的なアニメーションを…」など、まずは何でもご相談下さい。
+                  p.skillset_p スキルセット：
+                    br
+                    | HTML, CSS, Java Script, PHP, Sass,
+                    br
+                    | Pug, Bootstrap, jQuery, gulp  ...etc.(今後さらに増えていきます)
+        // end section
+
+        // section
+        section#member.section
+          .main_right_heading_wrap
+            h2.main_right_heading.noto_serif メンバー
+          .member_wrap
+            .member_wrap_panel
+              p.member_wrap_panel_img.target
+                img(src="https://placehold.jp/150x150.png", alt="ハシグチ　ミナ")
+              h3.member_wrap_panel_heading.noto_serif.target ハシグチ　ミナ
+              p.member_wrap_panel_p.noto_sans_jp.target 個人でイラストやデザインを作っている物好き。脳科学、UX、アニメーション、Webマーケティング好き。
+                br
+                | 海外活動を視野にWebデザイナー兼プログラマーを目指している。
+            .member_wrap_panel
+              p.member_wrap_panel_img.target
+                img(src="https://placehold.jp/150x150.png", alt="イシジマ　ショウ")
+              h3.member_wrap_panel_heading.noto_serif.target イシジマ　ショウ
+              p.member_wrap_panel_p.noto_sans_jp.target テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            .member_wrap_panel
+              p.member_wrap_panel_img.target
+                img(src="https://placehold.jp/150x150.png", alt="イシジマ　ショウ")
+              h3.member_wrap_panel_heading.noto_serif.target イシジマ　ショウ
+              p.member_wrap_panel_p.noto_sans_jp.target テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            .member_wrap_panel
+              p.member_wrap_panel_img.target
+                img(src="https://placehold.jp/150x150.png", alt="イシジマ　ショウ")
+              h3.member_wrap_panel_heading.noto_serif.target イシジマ　ショウ
+              p.member_wrap_panel_p.noto_sans_jp.target テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            .member_wrap_panel
+              p.member_wrap_panel_img.target
+                img(src="https://placehold.jp/150x150.png", alt="イシジマ　ショウ")
+              h3.member_wrap_panel_heading.noto_serif.target イシジマ　ショウ
+              p.member_wrap_panel_p.noto_sans_jp.target テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        // end section
+
+        // section
+        section#past_works.section
+          .main_right_heading_wrap
+            h2.main_right_heading.noto_serif 過去作品
+          .past_works.target
+            p.past_works_img
+              img(src= imgPath + "icon_past_works.png", alt="")
+            p.past_works_p 申し訳ございません。準備中です。
+        // end section
+
+        // section
+        section#about_order.section
+          .main_right_heading_wrap
+            h2.main_right_heading.noto_serif ご依頼
+              br
+              | について
+          .about_order
+            p.about_order_p.target Webデザインからコーディング、Webデザインのみ、コーディングのみのどれでも承ります。
+              br
+              | ご依頼内容の参考価格、最低価格は以下をご覧ください。
+              br
+              | まだ駆け出したばかりのチームですので、
+              span.line.target 相場より安いこの価格は今だけです！
+            .about_order_table.target
+              .about_order_table_col
+                h3.about_order_table_heading コーディング
+                .about_order_table_data
+                  .about_order_table_data_name トップページ
+                  .about_order_table_data_price ¥30,000-
+                .about_order_table_data
+                  .about_order_table_data_name 下層ページ
+                  .about_order_table_data_price ¥8,000-
+                .about_order_table_data
+                  .about_order_table_data_name ランディングページ
+                  .about_order_table_data_price ¥40,000-
+                .about_order_table_data
+                  .about_order_table_data_name レスポンシブ化
+                  .about_order_table_data_price ¥80,000-
+              .about_order_table_col
+                h3.about_order_table_heading Webデザイン
+                .about_order_table_data
+                  .about_order_table_data_name トップページ
+                  .about_order_table_data_price ¥70,000-
+                .about_order_table_data
+                  .about_order_table_data_name 下層ページ
+                  .about_order_table_data_price ¥15,000-
+                .about_order_table_data
+                  .about_order_table_data_name ランディングページ
+                  .about_order_table_data_price ¥80,000-
+              .about_order_table_col
+                h3.about_order_table_heading 画像編集・加工等
+                .about_order_table_data
+                  .about_order_table_data_name バナー制作
+                  .about_order_table_data_price ¥6,000-
+                .about_order_table_data
+                  .about_order_table_data_name ロゴ制作
+                  .about_order_table_data_price ¥5,000-
+                .about_order_table_data
+                  .about_order_table_data_name 画像編集・加工
+                  .about_order_table_data_price ¥6,000-
+            p.about_order_bottom_p ※上記価格は制作のみの最低価格です。大幅な修正料等やサーバー・ドメイン代…その他オプション等は含みません
+              br
+              | 画像編集・加工等についてはサイズによって異なります。上記は1枚のみの参考価格です。
+              br
+              | 予算やご要望などヒアリングさせて頂きながらお見積もりを提示させて頂きますので、まずはお気軽にお問い合わせください。
+        // end section
+
+        // section
+        section#contact.section
+          .main_right_heading_wrap
+            h2.main_right_heading.noto_serif お問い合わせ
+        // end section
+    // end main_right
+  // end main

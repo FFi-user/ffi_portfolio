@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
     <script src="/js/main.js" defer></script>
+    <script src="/js/sidebar_fixed.js" defer></script>
   </head>
   <body>
   </body>
@@ -31,50 +32,172 @@
           <div class="mv_ani no3"></div>
         </div>
       </section>
-      <main class="main" style="height:2000px">
-        <div class="main_left js-fixed-target-content">
+      <!-- main-->
+      <main class="main" style="height: 4000px">
+        <!-- main_left-->
+        <div class="main_left js_fixed_target_content">
           <div class="main_left_inr">
             <div class="main_left_logo"><img src="./img/logo_ffi_bl.png" alt="FFi"></div>
             <nav class="main_left_nav">
               <ul class="main_left_ul">
-                <li class="main_left_li"><a class="main_left_a anchor_ffi is-active" href="">FFiとは</a></li>
-                <li class="main_left_li"><a class="main_left_a anchor_member" href="">メンバー</a></li>
-                <li class="main_left_li"><a class="main_left_a anchor_history" href="">過去作品</a></li>
-                <li class="main_left_li"><a class="main_left_a anchor_order" href="">ご依頼について</a></li>
-                <li class="main_left_li"><a class="main_left_a anchor_contact" href="">お問い合わせ</a></li>
+                <li class="main_left_li"><a class="main_left_a anchor_ffi" href="#ffi">FFiとは</a></li>
+                <li class="main_left_li"><a class="main_left_a anchor_member" href="#member">メンバー</a></li>
+                <li class="main_left_li"><a class="main_left_a anchor_history" href="#past_works">過去作品</a></li>
+                <li class="main_left_li"><a class="main_left_a anchor_order" href="#about_order">ご依頼について</a></li>
+                <li class="main_left_li"><a class="main_left_a anchor_contact" href="#contact">お問い合わせ</a></li>
               </ul>
             </nav>
           </div>
         </div>
-        <section class="main_right js-main-content">
+        <!-- end main_left-->
+        <!-- main_right-->
+        <section class="main_right js_main_content">
           <div class="main_right_inr">
-            <section>
+            <!-- section-->
+            <section class="section" id="ffi">
               <div class="main_right_heading_wrap">
                 <h2 class="main_right_heading noto_serif">FFi<br>とは？</h2>
               </div>
-              <p class="main_right_heading_bottom_p">“FFi”とは<span class="large">F</span>reelance<span class="large"> F</span>ront-end<span class="large">i</span>nnovation(フリーランス・フロントエンド・イノベーション)の略。<br>“個人で自由に動き回るフロントエンドエンジニア”を志す若手技術者のチームです。<br>- 2019年秋 -<br>クリエイティブで向上心旺盛なメンバーが集い、コミュニティとして発足。<br>- 2020年正月 -<br>「それぞれの得意分野が異なるメンバー同士で補完し合い、仕事したら…<br>色んな方からのホームページ制作のご依頼やご要望を満たすことができるのでは？」<br>そんな動機で、会社のようだけど会社ではない、ひとつのチームとして走り始めました。</p>
-            </section>
-            <div class="main_right_skillset">
-              <div class="main_right_skillset_inr">
-                <div class="main_right_skillset_col target">
-                  <h3 class="main_right_skillset_heading noto_serif web_design target">webデザイン</h3>
-                  <div class="main_right_skillset_p_inr">
-                    <p class="main_right_skillset_p">なんとなくのデザインからの卒業。<br>お客様とのやり取りから真のニーズ<br>を洗い出します。<br>また、<br>デザインの理論や知識を踏まえ、<br>目的達成を見据えた<br>Webデザインを制作を致します。</p>
-                    <p class="main_right_skillset_p">使用ツール：<br>Photoshop, Illustrator, XD,Animate, FireAlpaca ...etc.<br>(今後さらに増えていきます)</p>
+              <p class="main_right_heading_bottom_p target">“FFi”とは<span class="large">F</span>reelance<span class="large"> F</span>ront-end<span class="large"> i</span>nnovation(フリーランス・フロントエンド・イノベーション)の略。<br>“個人で自由に動き回るフロントエンドエンジニア”を志す若手技術者のチームです。<br>- 2019年秋 -<br>クリエイティブで向上心旺盛なメンバーが集い、コミュニティとして発足。<br>- 2020年正月 -<br>「それぞれの得意分野が異なるメンバー同士で補完し合い、仕事したら…<br>色んな方からのホームページ制作のご依頼やご要望を満たすことができるのでは？」<br>そんな動機で、会社のようだけど会社ではない、ひとつのチームとして走り始めました。</p>
+              <div class="skillset">
+                <div class="skillset_inr">
+                  <div class="skillset_col target">
+                    <h3 class="skillset_heading noto_serif web_design target">webデザイン</h3>
+                    <div class="skillset_p_inr target">
+                      <p class="skillset_p">なんとなくのデザインからの卒業。<br>お客様とのやり取りから真のニーズ<br>を洗い出します。<br>また、<br>デザインの理論や知識を踏まえ、<br>目的達成を見据えた<br>Webデザインを制作を致します。</p>
+                      <p class="skillset_p">使用ツール：<br>Photoshop, Illustrator, XD,Animate, FireAlpaca ...etc.<br>(今後さらに増えていきます)</p>
+                    </div>
                   </div>
-                </div>
-                <div class="main_right_skillset_col target">
-                  <h3 class="main_right_skillset_heading noto_serif coding target">コーディング</h3>
-                  <div class="main_right_skillset_p_inr">
-                    <p class="main_right_skillset_p">ホームページの制作を<br>得意としています。<br>「検索したら上の方に出てくる<br>ランディング・ページを作りたい」<br>「WordPressを使ったサイトがいい」<br>「魅力的なアニメーションを…」など、まずは何でもご相談下さい。</p>
-                    <p class="main_right_skillset_p">スキルセット：<br>HTML, CSS, Java Script, PHP, Sass,<br>Pug, Bootstrap, jQuery, gulp  ...etc.(今後さらに増えていきます)</p>
+                  <div class="skillset_col target">
+                    <h3 class="skillset_heading noto_serif coding target">コーディング</h3>
+                    <div class="skillset_p_inr target">
+                      <p class="skillset_p">ホームページの制作を<br>得意としています。<br>「検索したら上の方に出てくる<br>ランディング・ページを作りたい」<br>「WordPressを使ったサイトがいい」<br>「魅力的なアニメーションを…」など、まずは何でもご相談下さい。</p>
+                      <p class="skillset_p">スキルセット：<br>HTML, CSS, Java Script, PHP, Sass,<br>Pug, Bootstrap, jQuery, gulp  ...etc.(今後さらに増えていきます)</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
+            <!-- end section-->
+            <!-- section-->
+            <section class="section" id="member">
+              <div class="main_right_heading_wrap">
+                <h2 class="main_right_heading noto_serif">メンバー</h2>
+              </div>
+              <div class="member_wrap">
+                <div class="member_wrap_panel">
+                  <p class="member_wrap_panel_img target"><img src="https://placehold.jp/150x150.png" alt="ハシグチ　ミナ"></p>
+                  <h3 class="member_wrap_panel_heading noto_serif target">ハシグチ　ミナ</h3>
+                  <p class="member_wrap_panel_p noto_sans_jp target">個人でイラストやデザインを作っている物好き。脳科学、UX、アニメーション、Webマーケティング好き。<br>海外活動を視野にWebデザイナー兼プログラマーを目指している。</p>
+                </div>
+                <div class="member_wrap_panel">
+                  <p class="member_wrap_panel_img target"><img src="https://placehold.jp/150x150.png" alt="イシジマ　ショウ"></p>
+                  <h3 class="member_wrap_panel_heading noto_serif target">イシジマ　ショウ</h3>
+                  <p class="member_wrap_panel_p noto_sans_jp target">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+                <div class="member_wrap_panel">
+                  <p class="member_wrap_panel_img target"><img src="https://placehold.jp/150x150.png" alt="イシジマ　ショウ"></p>
+                  <h3 class="member_wrap_panel_heading noto_serif target">イシジマ　ショウ</h3>
+                  <p class="member_wrap_panel_p noto_sans_jp target">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+                <div class="member_wrap_panel">
+                  <p class="member_wrap_panel_img target"><img src="https://placehold.jp/150x150.png" alt="イシジマ　ショウ"></p>
+                  <h3 class="member_wrap_panel_heading noto_serif target">イシジマ　ショウ</h3>
+                  <p class="member_wrap_panel_p noto_sans_jp target">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+                <div class="member_wrap_panel">
+                  <p class="member_wrap_panel_img target"><img src="https://placehold.jp/150x150.png" alt="イシジマ　ショウ"></p>
+                  <h3 class="member_wrap_panel_heading noto_serif target">イシジマ　ショウ</h3>
+                  <p class="member_wrap_panel_p noto_sans_jp target">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+            </section>
+            <!-- end section-->
+            <!-- section-->
+            <section class="section" id="past_works">
+              <div class="main_right_heading_wrap">
+                <h2 class="main_right_heading noto_serif">過去作品</h2>
+              </div>
+              <div class="past_works target">
+                <p class="past_works_img"><img src="./img/icon_past_works.png" alt=""></p>
+                <p class="past_works_p">申し訳ございません。準備中です。</p>
+              </div>
+            </section>
+            <!-- end section-->
+            <!-- section-->
+            <section class="section" id="about_order">
+              <div class="main_right_heading_wrap">
+                <h2 class="main_right_heading noto_serif">ご依頼<br>について</h2>
+              </div>
+              <div class="about_order">
+                <p class="about_order_p target">Webデザインからコーディング、Webデザインのみ、コーディングのみのどれでも承ります。<br>ご依頼内容の参考価格、最低価格は以下をご覧ください。<br>まだ駆け出したばかりのチームですので、<span class="line target">相場より安いこの価格は今だけです！</span></p>
+                <div class="about_order_table target">
+                  <div class="about_order_table_col">
+                    <h3 class="about_order_table_heading">コーディング</h3>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">トップページ</div>
+                      <div class="about_order_table_data_price">¥30,000-</div>
+                    </div>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">下層ページ</div>
+                      <div class="about_order_table_data_price">¥8,000-</div>
+                    </div>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">ランディングページ</div>
+                      <div class="about_order_table_data_price">¥40,000-</div>
+                    </div>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">レスポンシブ化</div>
+                      <div class="about_order_table_data_price">¥80,000-</div>
+                    </div>
+                  </div>
+                  <div class="about_order_table_col">
+                    <h3 class="about_order_table_heading">Webデザイン</h3>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">トップページ</div>
+                      <div class="about_order_table_data_price">¥70,000-</div>
+                    </div>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">下層ページ</div>
+                      <div class="about_order_table_data_price">¥15,000-</div>
+                    </div>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">ランディングページ</div>
+                      <div class="about_order_table_data_price">¥80,000-</div>
+                    </div>
+                  </div>
+                  <div class="about_order_table_col">
+                    <h3 class="about_order_table_heading">画像編集・加工等</h3>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">バナー制作</div>
+                      <div class="about_order_table_data_price">¥6,000-</div>
+                    </div>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">ロゴ制作</div>
+                      <div class="about_order_table_data_price">¥5,000-</div>
+                    </div>
+                    <div class="about_order_table_data">
+                      <div class="about_order_table_data_name">画像編集・加工</div>
+                      <div class="about_order_table_data_price">¥6,000-</div>
+                    </div>
+                  </div>
+                </div>
+                <p class="about_order_bottom_p">※上記価格は制作のみの最低価格です。大幅な修正料等やサーバー・ドメイン代…その他オプション等は含みません<br>画像編集・加工等についてはサイズによって異なります。上記は1枚のみの参考価格です。<br>予算やご要望などヒアリングさせて頂きながらお見積もりを提示させて頂きますので、まずはお気軽にお問い合わせください。</p>
+              </div>
+            </section>
+            <!-- end section-->
+            <!-- section-->
+            <section class="section" id="contact">
+              <div class="main_right_heading_wrap">
+                <h2 class="main_right_heading noto_serif">お問い合わせ</h2>
+              </div>
+            </section>
+            <!-- end section-->
           </div>
         </section>
+        <!-- end main_right-->
       </main>
+      <!-- end main-->
       <!-- END contents-->
       <!-- footer-->
       <footer class="footer"></footer>
