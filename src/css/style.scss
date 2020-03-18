@@ -55,7 +55,7 @@
     &_generic_name {
       display: block;
       margin-top: 30px;
-      font-size: 22px;
+      font-size: 2.2rem;
       letter-spacing: 0.1em;
       line-height: 1.8;
       color: #fff;
@@ -119,8 +119,11 @@
     &_a {
       display: block;
       padding: 15px 0 10px 40px;
-      font-size: 22px;
+      font-size: 2.2rem;
       position: relative;
+      &:hover {
+        text-decoration: none;
+      }
       &::after {
         content: '';
         width: 0;
@@ -178,18 +181,18 @@
       height: 150px;
       margin: 0 auto;
       padding: 30px 5px;
-      border: 1px solid #000;
-      font-size: 18px;
+      border: 1px solid #333;
+      font-size: 1.8rem;
       letter-spacing: 0.1em;
       line-height: 1.4;
       &_bottom_p {
         margin-top: 60px;
-        font-size: 16px;
+        font-size: 1.6rem;
         letter-spacing: 0.1em;
         line-height: 2;
         text-align: center;
         .large {
-          font-size: 28px;
+          font-size: 2.8rem;
           color: #3e65c2;
         }
       }
@@ -212,7 +215,7 @@
       content: '';
       width: 2px;
       height: 0;
-      background: #000;
+      background: #333;
       position: absolute;
       top: 0;
       left: 0;
@@ -230,7 +233,7 @@
   &_heading {
     margin-left: -30px;
     padding: 15px 0 15px 70px;
-    font-size: 20px;
+    font-size: 2rem;
     letter-spacing: 0.03em;
     line-height: 1.4;
     position: relative;
@@ -248,7 +251,7 @@
       content: '';
       width: 0;
       height: 2px;
-      background: #000;
+      background: #333;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -258,7 +261,7 @@
       content: '';
       width: 0;
       height: 2px;
-      background: #000;
+      background: #333;
       transform: rotate(45deg);
       position: absolute;
       right: -5px;
@@ -283,7 +286,7 @@
       margin-left: -30px;
       padding: 15px 15px 0 30px;
     }
-    font-size: 18px;
+    font-size: 1.8rem;
     letter-spacing: 0.03em;
     line-height: 1.8;
     &:nth-child(n+2) {
@@ -316,7 +319,7 @@
     &_heading {
       margin-top: 20px;
       padding-bottom: 15px;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: bold;
       text-align: center;
       position: relative;
@@ -342,7 +345,7 @@
     }
     &_p {
       margin-top: 20px;
-      font-size: 16px;
+      font-size: 1.6rem;
       line-height: 1.6;
     }
   }
@@ -356,7 +359,7 @@
   }
   &_p {
     margin-top: 60px;
-    font-size: 40px;
+    font-size: 4rem;
     letter-spacing: 0.1em;
     line-height: 2;
     text-align: center;
@@ -366,7 +369,7 @@
 .about_order {
   &_p {
     margin-top: 60px;
-    font-size: 16px;
+    font-size: 1.6rem;
     letter-spacing: 0.1em;
     line-height: 2;
     text-align: center;
@@ -402,10 +405,10 @@
     }
     &_heading {
       padding: 15px 10px;
-      font-size: 20px;
+      font-size: 2rem;
       text-align: center;
       color: #fff;
-      background: #000;
+      background: #333;
       & + .about_order_table_data {
         margin-top: 20px;
       }
@@ -415,16 +418,130 @@
       justify-content: space-between;
       margin-top: 10px;
       padding: 0 5px 5px 5px;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid #333;
     }
   }
   &_bottom_p {
     margin-top: 60px;
-    font-size: 14px;
+    font-size: 1.4rem;
     letter-spacing: 0.03em;
     line-height: 1.6;
     text-align: center;
   }
 }
+
+.form {
+  display: block;
+  margin-top: 60px;
+  &_table {
+    display: flex;
+    align-items: flex-start;
+    &:nth-child(n+2) {
+      margin-top: 1em;
+    }
+    &_name {
+      width: 230px;
+      padding: 20px 15px;
+      color: #fff;
+      background: #333;
+    }
+    &_data {
+      width: 800px;
+      margin-left: 20px;
+    }
+  }
+  &_ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &_li {
+    margin-top: 20px;
+    margin-right: 40px;
+  }
+  .radio {
+    &:checked {
+      & + .label {
+        &::after {
+          content: '';
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background: #333;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+        }
+      }
+    }
+  }
+  .label {
+    display: inline-block;
+    height: 25px;
+    padding-left: 40px;
+    font-size: 1.6rem;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+    }
+  }
+  .input_text {
+    width: 100%;
+    padding: 20px 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    &::placeholder {
+      color: #ddd;
+    }
+  }
+  .other_text {
+    padding: 20px 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    resize: none;
+    &::placeholder {
+      color: #ddd;
+    }
+  }
+  &_submit {
+    margin-top: 40px;
+    &_btn {
+      display: inline-block;
+      width: 300px;
+      padding: 20px 15px;
+      font-size: 20px;
+      color: #fff;
+      background: #333;
+      cursor: pointer;
+      transition: opacity .2s;
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+.member_recruit {
+  &_p {
+    margin-top: 60px;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    text-align: center;
+  }
+}
+
 // footer
 @import "../include/footer";

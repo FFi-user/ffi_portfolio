@@ -29,7 +29,7 @@ block contents
       .mv_ani.no3
 
   // main
-  main.main(style="height: 4000px")
+  main.main
     // main_left
     .main_left.js_fixed_target_content
       .main_left_inr
@@ -47,6 +47,10 @@ block contents
               a.main_left_a.anchor_order(href="#about_order") ご依頼について
             li.main_left_li
               a.main_left_a.anchor_contact(href="#contact") お問い合わせ
+            li.main_left_li
+              a.main_left_a.anchor_contact(href="#member_recruit") 制作メンバー
+                br
+                | 求む！
     // end main_left
     // main_right
     section.main_right.js_main_content
@@ -216,7 +220,7 @@ block contents
                 .about_order_table_data
                   .about_order_table_data_name 画像編集・加工
                   .about_order_table_data_price ¥6,000-
-            p.about_order_bottom_p ※上記価格は制作のみの最低価格です。大幅な修正料等やサーバー・ドメイン代…その他オプション等は含みません
+            p.about_order_bottom_p.target ※上記価格は制作のみの最低価格です。大幅な修正料等やサーバー・ドメイン代…その他オプション等は含みません
               br
               | 画像編集・加工等についてはサイズによって異なります。上記は1枚のみの参考価格です。
               br
@@ -227,6 +231,60 @@ block contents
         section#contact.section
           .main_right_heading_wrap
             h2.main_right_heading.noto_serif お問い合わせ
+            fonm#form_main.form.target(method="post" action="")
+              .form_inr
+                .form_table
+                  .form_table_name お問い合わせ内容
+                  .form_table_data
+                    ul.form_ul
+                      li.form_li
+                        input#order.radio(type='radio', name='contact_detail', value='ご依頼')
+                        label.label(for='order') ご依頼
+                      li.form_li
+                        input#come_member.radio(type='radio', name='contact_detail', value='メンバー応募')
+                        label.label(for='come_member') メンバー応募
+                      li.form_li
+                        input#etc.radio(type='radio', name='contact_detail', value='その他')
+                        label.label(for='etc') その他
+                .form_table
+                  .form_table_name 貴社名
+                  .form_table_data
+                    input.input_text(type="text", name="company_name", placeholder="(例)xxx株式会社")
+                .form_table
+                  .form_table_name お名前
+                  .form_table_data
+                    input.input_text(type="text", name="full_name", placeholder="(例)山田　太郎")
+                .form_table
+                  .form_table_name メールアドレス
+                  .form_table_data
+                    input.input_text(type="email", name="email", placeholder="(例) xxx@gmail.com")
+                .form_table
+                  .form_table_name メッセージ
+                  .form_table_data
+                    textarea.other_text(name="other_text", cols="30", rows="10" placeholder="お問い合わせ内容")
+                .form_submit
+                  input.form_submit_btn(type="submit" value="送信")
+        // end section
+
+        // section
+        section#member_recruit.section
+          .main_right_heading_wrap
+            h2.main_right_heading.noto_serif 制作メンバー
+              br
+              | 求む！
+            p.member_recruit_p.target フリーランス志向のWebデザイナー/フロントエンドエンジニア/マークアップエンジニアの方で、
+              br
+              | 助け合いながら一緒に案件こなしたり、もくもく会(大体渋谷で開催)で
+              br
+              | ワイワイ切磋琢磨できるチームメンバーを1～2名募集中です！
+              br
+              | クリエイティブ、自主性がある、積極的な参加・発言・行動が可能、柔軟で多面的な思考ができる、
+              br
+              | コーディング・Webデザイン以外の個人活動に必要な知識の吸収もする、攻撃的な発言はしない…
+              br
+              | そんな感じのメンバーを探しています。(当チームはそういうメンバーで構成されています！)
+              br
+              | 詳細はお問い合わせ下さい。
         // end section
     // end main_right
   // end main

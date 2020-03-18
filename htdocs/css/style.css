@@ -66,6 +66,7 @@
 	display: block;
 	margin-top: 30px;
 	font-size: 22px;
+	font-size: 2.2rem;
 	letter-spacing: 0.1em;
 	line-height: 1.8;
 	color: #fff;
@@ -151,7 +152,12 @@
 	display: block;
 	padding: 15px 0 10px 40px;
 	font-size: 22px;
+	font-size: 2.2rem;
 	position: relative;
+}
+
+.main_left_a:hover {
+	text-decoration: none;
 }
 
 .main_left_a:after {
@@ -216,8 +222,9 @@
 	height: 150px;
 	margin: 0 auto;
 	padding: 30px 5px;
-	border: 1px solid #000;
+	border: 1px solid #333;
 	font-size: 18px;
+	font-size: 1.8rem;
 	letter-spacing: 0.1em;
 	line-height: 1.4;
 }
@@ -229,6 +236,7 @@
 .main_right_heading_bottom_p {
 	margin-top: 60px;
 	font-size: 16px;
+	font-size: 1.6rem;
 	letter-spacing: 0.1em;
 	line-height: 2;
 	text-align: center;
@@ -236,6 +244,7 @@
 
 .main_right_heading_bottom_p .large {
 	font-size: 28px;
+	font-size: 2.8rem;
 	color: #3e65c2;
 }
 
@@ -261,7 +270,7 @@
 	content: '';
 	width: 2px;
 	height: 0;
-	background: #000;
+	background: #333;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -277,6 +286,7 @@
 	margin-left: -30px;
 	padding: 15px 0 15px 70px;
 	font-size: 20px;
+	font-size: 2rem;
 	letter-spacing: 0.03em;
 	line-height: 1.4;
 	position: relative;
@@ -298,7 +308,7 @@
 	content: '';
 	width: 0;
 	height: 2px;
-	background: #000;
+	background: #333;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -309,7 +319,7 @@
 	content: '';
 	width: 0;
 	height: 2px;
-	background: #000;
+	background: #333;
 	-webkit-transform: rotate(45deg);
 	        transform: rotate(45deg);
 	position: absolute;
@@ -333,6 +343,7 @@
 
 .skillset_p {
 	font-size: 18px;
+	font-size: 1.8rem;
 	letter-spacing: 0.03em;
 	line-height: 1.8;
 }
@@ -382,6 +393,7 @@
 	margin-top: 20px;
 	padding-bottom: 15px;
 	font-size: 20px;
+	font-size: 2rem;
 	font-weight: bold;
 	text-align: center;
 	position: relative;
@@ -407,6 +419,7 @@
 .member_wrap_panel_p {
 	margin-top: 20px;
 	font-size: 16px;
+	font-size: 1.6rem;
 	line-height: 1.6;
 }
 
@@ -419,6 +432,7 @@
 .past_works_p {
 	margin-top: 60px;
 	font-size: 40px;
+	font-size: 4rem;
 	letter-spacing: 0.1em;
 	line-height: 2;
 	text-align: center;
@@ -427,6 +441,7 @@
 .about_order_p {
 	margin-top: 60px;
 	font-size: 16px;
+	font-size: 1.6rem;
 	letter-spacing: 0.1em;
 	line-height: 2;
 	text-align: center;
@@ -471,9 +486,10 @@
 .about_order_table_heading {
 	padding: 15px 10px;
 	font-size: 20px;
+	font-size: 2rem;
 	text-align: center;
 	color: #fff;
-	background: #000;
+	background: #333;
 }
 
 .about_order_table_heading + .about_order_table_data {
@@ -487,18 +503,185 @@
 	    justify-content: space-between;
 	margin-top: 10px;
 	padding: 0 5px 5px 5px;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #333;
 }
 
 .about_order_bottom_p {
 	margin-top: 60px;
 	font-size: 14px;
+	font-size: 1.4rem;
 	letter-spacing: 0.03em;
 	line-height: 1.6;
 	text-align: center;
 }
 
-.footer {
+.form {
 	display: block;
+	margin-top: 60px;
+}
+
+.form_table {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: start;
+	    align-items: flex-start;
+}
+
+.form_table:nth-child(n+2) {
+	margin-top: 1em;
+}
+
+.form_table_name {
+	width: 230px;
+	padding: 20px 15px;
+	color: #fff;
+	background: #333;
+}
+
+.form_table_data {
+	width: 800px;
+	margin-left: 20px;
+}
+
+.form_ul {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.form_li {
+	margin-top: 20px;
+	margin-right: 40px;
+}
+
+.form .radio:checked + .label:after {
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #333;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.form .label {
+	display: inline-block;
+	height: 25px;
+	padding-left: 40px;
+	font-size: 16px;
+	font-size: 1.6rem;
+	position: relative;
+	cursor: pointer;
+}
+
+.form .label:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+
+.form .input_text {
+	width: 100%;
+	padding: 20px 15px;
+	border: 1px solid #333;
+	border-radius: 4px;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	letter-spacing: 0.03em;
+}
+
+.form .input_text::-webkit-input-placeholder {
+	color: #ddd;
+}
+
+.form .input_text:-ms-input-placeholder {
+	color: #ddd;
+}
+
+.form .input_text::placeholder {
+	color: #ddd;
+}
+
+.form .other_text {
+	padding: 20px 15px;
+	border: 1px solid #333;
+	border-radius: 4px;
+	font-size: 16px;
+	font-size: 1.6rem;
+	resize: none;
+}
+
+.form .other_text::-webkit-input-placeholder {
+	color: #ddd;
+}
+
+.form .other_text:-ms-input-placeholder {
+	color: #ddd;
+}
+
+.form .other_text::placeholder {
+	color: #ddd;
+}
+
+.form_submit {
+	margin-top: 40px;
+}
+
+.form_submit_btn {
+	display: inline-block;
+	width: 300px;
+	padding: 20px 15px;
+	font-size: 20px;
+	color: #fff;
+	background: #333;
+	cursor: pointer;
+	transition: opacity .2s;
+}
+
+.form_submit_btn:hover {
+	opacity: .7;
+}
+
+.member_recruit_p {
+	margin-top: 60px;
+	font-size: 16px;
+	font-size: 1.6rem;
+	letter-spacing: 0.1em;
+	line-height: 2;
+	text-align: center;
+}
+
+.footer_main {
+	margin: 100px 0;
+}
+
+.footer_main_last_message {
+	font-size: 50px;
+	letter-spacing: 0.1em;
+	line-height: 1.4;
+	text-align: center;
+}
+
+.footer_sub_inr {
+	padding: 20px;
+	background: #333;
+}
+
+.footer_sub_copyright {
+	font-size: 16px;
+	font-size: 1.6rem;
+	letter-spacing: 0.03em;
+	line-height: 1.4;
+	color: #fff;
+	text-align: center;
 }
 

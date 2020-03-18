@@ -33,7 +33,7 @@
         </div>
       </section>
       <!-- main-->
-      <main class="main" style="height: 4000px">
+      <main class="main">
         <!-- main_left-->
         <div class="main_left js_fixed_target_content">
           <div class="main_left_inr">
@@ -45,6 +45,7 @@
                 <li class="main_left_li"><a class="main_left_a anchor_history" href="#past_works">過去作品</a></li>
                 <li class="main_left_li"><a class="main_left_a anchor_order" href="#about_order">ご依頼について</a></li>
                 <li class="main_left_li"><a class="main_left_a anchor_contact" href="#contact">お問い合わせ</a></li>
+                <li class="main_left_li"><a class="main_left_a anchor_contact" href="#member_recruit">制作メンバー<br>求む！</a></li>
               </ul>
             </nav>
           </div>
@@ -182,7 +183,7 @@
                     </div>
                   </div>
                 </div>
-                <p class="about_order_bottom_p">※上記価格は制作のみの最低価格です。大幅な修正料等やサーバー・ドメイン代…その他オプション等は含みません<br>画像編集・加工等についてはサイズによって異なります。上記は1枚のみの参考価格です。<br>予算やご要望などヒアリングさせて頂きながらお見積もりを提示させて頂きますので、まずはお気軽にお問い合わせください。</p>
+                <p class="about_order_bottom_p target">※上記価格は制作のみの最低価格です。大幅な修正料等やサーバー・ドメイン代…その他オプション等は含みません<br>画像編集・加工等についてはサイズによって異なります。上記は1枚のみの参考価格です。<br>予算やご要望などヒアリングさせて頂きながらお見積もりを提示させて頂きますので、まずはお気軽にお問い合わせください。</p>
               </div>
             </section>
             <!-- end section-->
@@ -190,6 +191,64 @@
             <section class="section" id="contact">
               <div class="main_right_heading_wrap">
                 <h2 class="main_right_heading noto_serif">お問い合わせ</h2>
+                <fonm class="form target" id="form_main" method="post" action="">
+                  <div class="form_inr">
+                    <div class="form_table">
+                      <div class="form_table_name">お問い合わせ内容</div>
+                      <div class="form_table_data">
+                        <ul class="form_ul">
+                          <li class="form_li">
+                            <input class="radio" id="order" type="radio" name="contact_detail" value="ご依頼">
+                            <label class="label" for="order">ご依頼</label>
+                          </li>
+                          <li class="form_li">
+                            <input class="radio" id="come_member" type="radio" name="contact_detail" value="メンバー応募">
+                            <label class="label" for="come_member">メンバー応募</label>
+                          </li>
+                          <li class="form_li">
+                            <input class="radio" id="etc" type="radio" name="contact_detail" value="その他">
+                            <label class="label" for="etc">その他</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form_table">
+                      <div class="form_table_name">貴社名</div>
+                      <div class="form_table_data">
+                        <input class="input_text" type="text" name="company_name" placeholder="(例)xxx株式会社">
+                      </div>
+                    </div>
+                    <div class="form_table">
+                      <div class="form_table_name">お名前</div>
+                      <div class="form_table_data">
+                        <input class="input_text" type="text" name="full_name" placeholder="(例)山田　太郎">
+                      </div>
+                    </div>
+                    <div class="form_table">
+                      <div class="form_table_name">メールアドレス</div>
+                      <div class="form_table_data">
+                        <input class="input_text" type="email" name="email" placeholder="(例) xxx@gmail.com">
+                      </div>
+                    </div>
+                    <div class="form_table">
+                      <div class="form_table_name">メッセージ</div>
+                      <div class="form_table_data">
+                        <textarea class="other_text" name="other_text" cols="30" rows="10" placeholder="お問い合わせ内容"></textarea>
+                      </div>
+                    </div>
+                    <div class="form_submit">
+                      <input class="form_submit_btn" type="submit" value="送信">
+                    </div>
+                  </div>
+                </fonm>
+              </div>
+            </section>
+            <!-- end section-->
+            <!-- section-->
+            <section class="section" id="member_recruit">
+              <div class="main_right_heading_wrap">
+                <h2 class="main_right_heading noto_serif">制作メンバー<br>求む！</h2>
+                <p class="member_recruit_p target">フリーランス志向のWebデザイナー/フロントエンドエンジニア/マークアップエンジニアの方で、<br>助け合いながら一緒に案件こなしたり、もくもく会(大体渋谷で開催)で<br>ワイワイ切磋琢磨できるチームメンバーを1～2名募集中です！<br>クリエイティブ、自主性がある、積極的な参加・発言・行動が可能、柔軟で多面的な思考ができる、<br>コーディング・Webデザイン以外の個人活動に必要な知識の吸収もする、攻撃的な発言はしない…<br>そんな感じのメンバーを探しています。(当チームはそういうメンバーで構成されています！)<br>詳細はお問い合わせ下さい。</p>
               </div>
             </section>
             <!-- end section-->
@@ -200,7 +259,18 @@
       <!-- end main-->
       <!-- END contents-->
       <!-- footer-->
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer_main">
+          <div class="footer_main_inr">
+            <p class="footer_main_last_message target">〜 Thanks for watching 〜</p>
+          </div>
+        </div>
+        <div class="footer_sub">
+          <div class="footer_sub_inr">
+            <p class="footer_sub_copyright">&copy; 2020 FFi</p>
+          </div>
+        </div>
+      </footer>
       <!-- END footer-->
     </div>
   </body>

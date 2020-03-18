@@ -1,4 +1,24 @@
 .footer {
-  // test
-  display: block;
+  &_main {
+    margin: 100px 0;
+    &_last_message {
+      font-size: 50px;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
+      text-align: center;
+    }
+  }
+  &_sub {
+    &_inr {
+      padding: 20px;
+      background: #333;
+    }
+    &_copyright {
+      font-size: 1.6rem;
+      letter-spacing: 0.03em;
+      line-height: 1.4;
+      color: #fff;
+      text-align: center;
+    }
+  }
 }
