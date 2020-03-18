@@ -39,7 +39,7 @@ $(function() {
       var wHeight = $(window).height(); //ブラウザ全体の高さを取得
 
       // 処理のタイミング
-      if (scrollPos > targetOffset - wHeight + wHeight / 2) {
+      if (scrollPos > targetOffset - wHeight + wHeight / 3) {
         $(this).addClass(isAnimation);
       }
     });
