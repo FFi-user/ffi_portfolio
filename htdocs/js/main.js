@@ -52,18 +52,19 @@ $(function() {
     "#member": 0,
     "#past_works": 0,
     "#about_order": 0,
-    "#contact": 0
+    "#contact": 0,
+    "#member_recruit": 0
   };
   var $globalNavi = new Array();
   for (var key in array) {
     if ($(key).offset()) {
-      array[key] = $(key).offset().top - 10;
+      array[key] = $(key).offset().top - 100;
       $globalNavi[key] = $('.main_left_ul .main_left_li a[href="' + key + '"]');
     }
   }
   $(window).scroll(function () {
     for (var key in array) {
-      if ($(window).scrollTop() > array[key] - 10) {
+      if ($(window).scrollTop() > array[key] - 100) {
         $(".main_left_a").each(function() {
           $(this).removeClass(active);
         });
