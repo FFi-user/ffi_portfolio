@@ -19,10 +19,21 @@
     margin-top: 100px;
   }
 }
+@media screen and (max-width: $media_sp) {
+  body {
+    min-width: 320px;
+  }
+  .section {
+    & + & {
+      margin-top: 40px;
+    }
+  }
+}
 
 .mv {
   background: url("#{$imgPath}mv.jpg") no-repeat;
   background-size: cover;
+  background-position: center center;
   position: relative;
   &_inr {
     width: 450px;
@@ -90,6 +101,29 @@
     }
     &.no3.is-active {
       transform: rotate(67.5deg);
+    }
+  }
+}
+@media screen and (max-width: $media_sp) {
+  .mv {
+    &_inr {
+      width: 250px;
+      height: 250px;
+    }
+    &_heading {
+      &_logo {
+        width: 120px;
+      }
+      &_generic_name {
+        margin-top: .5em;
+        font-size: 1.8rem;
+        letter-spacing: 0.1em;
+        line-height: 1.8;
+      }
+    }
+    &_ani {
+      width: 250px;
+      height: 250px;
     }
   }
 }
@@ -199,6 +233,99 @@
     }
   }
 }
+@media screen and (max-width: $media_sp) {
+  .main {
+    display: block;
+    width: 100%;
+    margin: 30px auto 0;
+    padding: 0 15px;
+    &_left {
+      display: none;
+      width: 200px;
+      margin-top: 40px;
+      &_logo {
+        width: 200px;
+        margin: 0 auto;
+      }
+      &_nav {
+        margin-top: 40px;
+      }
+      &_li {
+        &:nth-child(n+2) {
+          margin-top: 1em;
+        }
+      }
+      &_a {
+        display: block;
+        padding: 15px 0 10px 40px;
+        font-size: 2.2rem;
+        position: relative;
+        &:hover {
+          text-decoration: none;
+        }
+        &::after {
+          content: '';
+          width: 0;
+          height: 5px;
+          margin: auto;
+          background: #3e65c2;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          transition: width .6s;
+        }
+        &.is-active {
+          &::after {
+            width: 100%;
+          }
+        }
+        &.anchor_ffi {
+          background: url("#{$imgPath}icon_ffi.jpg") no-repeat;
+          background-size: 25px;
+          background-position: center left 5px;
+        }
+        &.anchor_member {
+          background: url("#{$imgPath}icon_member.jpg") no-repeat;
+          background-size: 25px;
+          background-position: center left 5px;
+        }
+        &.anchor_history {
+          background: url("#{$imgPath}icon_history.jpg") no-repeat;
+          background-size: 25px;
+          background-position: center left 5px;
+        }
+        &.anchor_order {
+          background: url("#{$imgPath}icon_order.jpg") no-repeat;
+          background-size: 25px;
+          background-position: center left 5px;
+        }
+        &.anchor_contact {
+          background: url("#{$imgPath}icon_contact.jpg") no-repeat;
+          background-size: 25px;
+          background-position: center left 5px;
+        }
+      }
+    }
+    &_right {
+      width: 100%;
+      &_heading {
+        width: 100px;
+        height: 100px;
+        padding: 15px 5px;
+        font-size: 1.8rem;
+        &_bottom_p {
+          margin-top: 30px;
+          font-size: 1.6rem;
+          .large {
+            font-size: 2rem;
+            color: #3e65c2;
+          }
+        }
+      }
+    }
+  }
+}
 
 .skillset {
   margin-top: 60px;
@@ -294,6 +421,23 @@
     }
   }
 }
+@media screen and (max-width: $media_sp) {
+  .skillset {
+    margin-top: 30px;
+    &_inr {
+      display:  block;
+    }
+    &_col {
+      width: 100%;
+    }
+    &_heading {
+      font-size: 1.8rem;
+    }
+    &_p {
+      font-size: 1.6rem;
+    }
+  }
+}
 
 .member_wrap {
   display: flex;
@@ -350,6 +494,37 @@
     }
   }
 }
+@media screen and (max-width: $media_sp) {
+  .member_wrap {
+    justify-content: space-between;
+    margin-top: 30px;
+    &_panel {
+      width: calc((100% - 15px) / 2);
+      &:nth-child(n+4) {
+        margin-top: 0px;
+      }
+      &:nth-child(n+3) {
+        margin-top: 15px;
+        margin-left: 0;
+      }
+      &:nth-child(2n) {
+        margin-left: 15px;
+      }
+      &_img {
+        text-align: center;
+        img {
+          border-radius: 50%;
+        }
+      }
+      &_heading {
+        font-size: 1.6rem;
+      }
+      &_p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
 
 .past_works {
   &_img {
@@ -363,6 +538,18 @@
     letter-spacing: 0.1em;
     line-height: 2;
     text-align: center;
+  }
+}
+@media screen and (max-width: $media_sp) {
+  .past_works {
+    &_img {
+      width: 50%;
+      margin: 30px auto 0;
+    }
+    &_p {
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -429,6 +616,32 @@
     text-align: center;
   }
 }
+@media screen and (max-width: $media_sp) {
+  .about_order {
+    &_p {
+      margin-top: 30px;
+    }
+    &_table {
+      display: block;
+      margin-top: 30px;
+      &_col {
+        width: 100%;
+        &:nth-child(n+2) {
+          margin-top: 20px;
+        }
+      }
+      &_heading {
+        font-size: 1.8rem;
+      }
+    }
+    &_bottom_p {
+      margin-top: 30px;
+      padding-left: 1em;
+      text-indent: -1em;
+      text-align: left;
+    }
+  }
+}
 
 .form {
   display: block;
@@ -440,13 +653,13 @@
       margin-top: 1em;
     }
     &_name {
-      width: 230px;
+      width: 190px;
       padding: 20px 15px;
       color: #fff;
       background: #333;
     }
     &_data {
-      width: 800px;
+      width: 640px;
       margin-left: 20px;
     }
   }
@@ -532,6 +745,38 @@
     }
   }
 }
+@media screen and (max-width: $media_sp) {
+  .form {
+    display: block;
+    margin-top: 30px;
+    &_table {
+      display: block;
+      &_name {
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 1.6rem;
+      }
+      &_data {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+    &_ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -20px;
+    }
+    &_submit {
+      margin-top: 30px;
+      &_btn {
+        width: 220px;
+        padding: 15px 10px;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
 
 .member_recruit {
   &_p {
@@ -540,6 +785,14 @@
     letter-spacing: 0.1em;
     line-height: 2;
     text-align: center;
+  }
+}
+@media screen and (max-width: $media_sp) {
+  .member_recruit {
+    &_p {
+      margin-top: 30px;
+      font-size: 1.4rem;
+    }
   }
 }
 

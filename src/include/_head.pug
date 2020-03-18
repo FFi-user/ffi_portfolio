@@ -1,6 +1,17 @@
 head
   meta(charset="UTF-8")
-  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  script.
+    var contentWidth = 1150; // コンテンツの幅に合わせて修正してください
+    var ua = navigator.userAgent; // ユーザーエージェントの取得
+    var ua_ver2 = window.navigator.userAgent.toLowerCase();
+    var isiPad = ua_ver2.indexOf('ipad') > -1 || ua_ver2.indexOf('macintosh') > -1 && 'ontouchend' in document;
+    if((ua.indexOf('Android') > 0 && ua.indexOf('Mobile') == -1) || ua.indexOf('iPad') > 0 || ua.indexOf('Kindle') > 0 || ua.indexOf('Silk') > 0 || isiPad){
+      // タブレット端末だった場合の処理
+      document.write('<meta name="viewport" content="width=' + contentWidth + '">');
+    } else {
+      // タブレット端末ではない場合の処理
+      document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+    }
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
   block title
   block meta
