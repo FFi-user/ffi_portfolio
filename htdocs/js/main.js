@@ -5,6 +5,8 @@ var goSP = spWid >= windowWidth;
 
 $(function() {
   var winH = window.innerHeight;
+  var humToggle = $(".sp_hum_toggle");
+  var humLine = $(".sp_hum_line");
 
   // ファーストビュー高さMAX
   $(".js_mv_height").css({height:winH});
@@ -28,7 +30,6 @@ $(function() {
     return false;
   });
 
-  // 画面真ん中でアニメーション発火
   $(window).on("scroll", function() {
     var target = $(".target"); //表示非表示の対象
     var isAnimation = "is-animation"; //表示クラスの付与用
@@ -37,6 +38,7 @@ $(function() {
     var winH = $(window).innerHeight(); //ウィンドウの高さ
     var bottomPos = docH - winH; //ページ全体の高さ - ウィンドウの高さ = ページの最下部位置
 
+    // 画面真ん中でアニメーション発火
     target.each(function() {
       var targetOffset = $(this).offset().top; //対象の高さ
       var scrollPos = $(window).scrollTop(); //ブラウザ全体のスクロール位置
@@ -50,6 +52,19 @@ $(function() {
         target.last().addClass(isAnimation);
       }
     });
+
+    // scroll時 ハンバーガーメニューの色を反転
+    if(goSP) {
+      if(humToggle.hasClass(active)) {
+        humColorDefault();
+      } else {
+        if ($(this).scrollTop() + 60 > winH) {
+          humColorChange();
+        } else {
+          humColorDefault();
+        }
+      }
+    }
   });
 
   // navカレント表示
@@ -81,6 +96,46 @@ $(function() {
   });
   }
   stepMenu();
+
+  if(goSP) {
+    // ハンバーガーメニューの開閉
+    humToggle.on("click", function() {
+      // 開閉時 ハンバーガーメニューの色を反転
+      if ($(window).scrollTop() + 60 > winH && !$(this).hasClass(active)) {
+        humColorDefault();
+      } else if($(window).scrollTop() + 60 > winH && $(this).hasClass(active)) {
+        humColorChange();
+      }
+      $(this).toggleClass(active);
+      $(".js_fixed_target_content").toggleClass(active);
+    });
+    $(".main_left_a").on('click', function() {
+      // 開閉メニュークリック時は、mv下にしかクリックされない。
+      if ($(window).scrollTop() + 60) {
+        humColorChange();
+      }
+      humToggle.removeClass(active);
+      $(".js_fixed_target_content").removeClass(active);
+    });
+  }
+
+  // 関数 / ハンバーガーメニューの色を変更
+  function humColorDefault() {
+    humToggle.css({
+      "border-color": "#fff"
+    });
+    humLine.css({
+      "background-color": "#fff"
+    });
+  }
+  function humColorChange() {
+    humToggle.css({
+      "border-color": "#333"
+    });
+    humLine.css({
+      "background-color": "#333"
+    });
+  }
 });
 
 $(window).on("load", function() {

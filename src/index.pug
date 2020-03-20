@@ -27,14 +27,20 @@ block contents
       .mv_ani.no1
       .mv_ani.no2
       .mv_ani.no3
+    .sp_hum_toggle
+      .sp_hum_line
+      .sp_hum_line
+      .sp_hum_line
 
   // main
   main.main
     // main_left
     .main_left.js_fixed_target_content
       .main_left_inr
-        .main_left_logo
+        .main_left_logo.forPC
           img(src= imgPath + "logo_ffi_bl.png", alt="FFi")
+        .main_left_logo.forSP
+          img(src= imgPath + "logo_ffi.png", alt="FFi")
         nav.main_left_nav
           ul.main_left_ul
             li.main_left_li
@@ -48,7 +54,7 @@ block contents
             li.main_left_li
               a.main_left_a.anchor_contact(href="#contact") お問い合わせ
             li.main_left_li
-              a.main_left_a.anchor_contact(href="#member_recruit") 制作メンバー
+              a.main_left_a.anchor_member(href="#member_recruit") 制作メンバー
                 br
                 | 求む！
     // end main_left
