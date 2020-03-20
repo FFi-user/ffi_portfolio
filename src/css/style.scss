@@ -58,6 +58,27 @@
     bottom: 0;
     left: 0;
   }
+  &_arw_bottom {
+    width: 150px;
+    height: 30px;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    transform: rotate(90deg);
+    animation: upDownArw 1.2s linear infinite;
+    &::before {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      right: -2.5px;
+      bottom: 7.5px;
+      transform: rotate(45deg);
+    }
+  }
   &_heading {
     display: flex;
     flex-direction: column;
@@ -122,6 +143,15 @@
     &_inr {
       width: 220px;
       height: 220px;
+    }
+    &_arw_bottom {
+      width: 70px;
+      height: 15px;
+      bottom: 50px;
+      &::before {
+        width: 15px;
+        bottom: 3.5px;
+      }
     }
     &_heading {
       &_logo {

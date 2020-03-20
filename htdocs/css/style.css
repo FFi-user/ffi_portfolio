@@ -33,6 +33,32 @@
 	left: 0;
 }
 
+.mv_arw_bottom {
+	width: 150px;
+	height: 30px;
+	border-bottom: 2px solid #fff;
+	position: absolute;
+	bottom: 100px;
+	left: 0;
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+	-webkit-animation: upDownArw 1.2s linear infinite;
+	        animation: upDownArw 1.2s linear infinite;
+}
+
+.mv_arw_bottom:before {
+	content: '';
+	display: block;
+	width: 25px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	right: -2.5px;
+	bottom: 7.5px;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
 .mv_heading {
 	display: -ms-flexbox;
 	display: flex;
@@ -727,6 +753,17 @@ body {
 .mv_inr {
 	width: 220px;
 	height: 220px;
+}
+
+.mv_arw_bottom {
+	width: 70px;
+	height: 15px;
+	bottom: 50px;
+}
+
+.mv_arw_bottom:before {
+	width: 15px;
+	bottom: 3.5px;
 }
 
 .mv_heading_logo {
