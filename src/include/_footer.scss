@@ -51,6 +51,7 @@
   top: 0;
   right: 0;
   transform: rotate(90deg);
+  animation: upDownArw 1.2s linear infinite;
   &::before {
     content: '';
     display: block;

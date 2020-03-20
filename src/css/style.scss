@@ -10,6 +10,19 @@
   opacity: 1;
 }
 
+// 上下ふわふわさせるアニメーション
+@keyframes upDownArw {
+  0% {
+    transform: translateY(0) rotate(90deg)
+  }
+  50% {
+    transform: translateY(-20px) rotate(90deg)
+  }
+  100% {
+    transform: translateY(0) rotate(90deg)
+  }
+}
+
 // header
 @import "../include/header";
 
