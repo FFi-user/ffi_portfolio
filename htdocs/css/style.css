@@ -658,6 +658,10 @@
 	text-align: center;
 }
 
+.footer {
+	position: relative;
+}
+
 .footer_main {
 	margin: 100px 0;
 }
@@ -682,6 +686,30 @@
 	line-height: 1.4;
 	color: #fff;
 	text-align: center;
+}
+
+.page_top {
+	width: 150px;
+	height: 30px;
+	border-bottom: 2px solid #333;
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+
+.page_top:before {
+	content: '';
+	display: block;
+	width: 25px;
+	height: 2px;
+	background: #333;
+	position: absolute;
+	bottom: 7.5px;
+	left: -2.5px;
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 767px) {
@@ -1005,6 +1033,17 @@ body {
 
 .footer_sub_copyright {
 	font-size: 1.4rem;
+}
+
+.page_top {
+	width: 70px;
+	height: 15px;
+	right: -20px;
+}
+
+.page_top:before {
+	width: 15px;
+	bottom: 3.5px;
 }
 
 }

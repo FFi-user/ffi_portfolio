@@ -11,6 +11,12 @@ $(function() {
   // ファーストビュー高さMAX
   $(".js_mv_height").css({height:winH});
 
+  // ページトップ
+  $(".page_top").on("click", function() {
+    $("body, html").animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+
   // スムーススクロール
   // smooth scroll
   $('a[href^="#"]').click(function() {
