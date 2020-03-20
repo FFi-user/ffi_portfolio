@@ -158,6 +158,9 @@
 	padding: 15px 0 10px 40px;
 	font-size: 22px;
 	font-size: 2.2rem;
+	background-repeat: no-repeat;
+	background-size: 25px;
+	background-position: center left 5px;
 	position: relative;
 }
 
@@ -183,33 +186,23 @@
 }
 
 .main_left_a.anchor_ffi {
-	background: url("/img/icon_ffi.jpg") no-repeat;
-	background-size: 25px;
-	background-position: center left 5px;
+	background-image: url("/img/icon_ffi.png");
 }
 
 .main_left_a.anchor_member {
-	background: url("/img/icon_member.jpg") no-repeat;
-	background-size: 25px;
-	background-position: center left 5px;
+	background-image: url("/img/icon_member.png");
 }
 
 .main_left_a.anchor_history {
-	background: url("/img/icon_history.jpg") no-repeat;
-	background-size: 25px;
-	background-position: center left 5px;
+	background-image: url("/img/icon_history.png");
 }
 
 .main_left_a.anchor_order {
-	background: url("/img/icon_order.jpg") no-repeat;
-	background-size: 25px;
-	background-position: center left 5px;
+	background-image: url("/img/icon_order.png");
 }
 
 .main_left_a.anchor_contact {
-	background: url("/img/icon_contact.jpg") no-repeat;
-	background-size: 25px;
-	background-position: center left 5px;
+	background-image: url("/img/icon_contact.png");
 }
 
 .main_right {
@@ -298,13 +291,13 @@
 }
 
 .skillset_heading.web_design {
-	background: url(/img/icon_design.jpg) no-repeat;
+	background: url(/img/icon_design.png) no-repeat;
 	background-size: 25px;
 	background-position: center left 30px;
 }
 
 .skillset_heading.coding {
-	background: url(/img/icon_history.jpg) no-repeat;
+	background: url(/img/icon_history.png) no-repeat;
 	background-size: 25px;
 	background-position: center left 30px;
 }
@@ -813,6 +806,26 @@ body {
 .main_left_a {
 	font-size: 1.8rem;
 	color: #fff;
+}
+
+.main_left_a.anchor_ffi {
+	background-image: url("/img/icon_ffi_sp.png");
+}
+
+.main_left_a.anchor_member {
+	background-image: url("/img/icon_member_sp.png");
+}
+
+.main_left_a.anchor_history {
+	background-image: url("/img/icon_history_sp.png");
+}
+
+.main_left_a.anchor_order {
+	background-image: url("/img/icon_order_sp.png");
+}
+
+.main_left_a.anchor_contact {
+	background-image: url("/img/icon_contact_sp.png");
 }
 
 .main_right {
