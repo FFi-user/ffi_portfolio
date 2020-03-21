@@ -24,8 +24,7 @@ $(function() {
     var speed = 400;
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? "html" : href);
-    var hMHeight = $(".header").outerHeight(); //固定ヘッダーの高さ
-    var position = target.offset().top - hMHeight; //ターゲットの座標 - ヘッダの高さ
+    var position = target.offset().top - 20;
 
     $("body,html").animate(
       {
