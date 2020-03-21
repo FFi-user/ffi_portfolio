@@ -318,13 +318,13 @@
 }
 
 .skillset_heading.web_design {
-	background: url(/img/icon_design.png) no-repeat;
+	background: url("/img/icon_design.png") no-repeat;
 	background-size: 25px;
 	background-position: center left 30px;
 }
 
 .skillset_heading.coding {
-	background: url(/img/icon_history.png) no-repeat;
+	background: url("/img/icon_history.png") no-repeat;
 	background-size: 25px;
 	background-position: center left 30px;
 }
