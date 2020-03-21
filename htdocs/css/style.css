@@ -410,6 +410,8 @@
 }
 
 .member_wrap_panel_img img {
+	width: 150px;
+	border: 1px solid #d4d4d4;
 	border-radius: 50%;
 }
 
