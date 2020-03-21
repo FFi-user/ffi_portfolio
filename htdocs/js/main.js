@@ -116,7 +116,7 @@ $(function() {
       $(".js_fixed_target_content").toggleClass(active);
     });
     $(".main_left_a").on('click', function() {
-      // 開閉メニュークリック時は、mv下にしかクリックされない。
+      // 開閉メニュークリック時は、mv下にしかスクロールされない。
       if ($(window).scrollTop() + 60) {
         humColorChange();
       }
