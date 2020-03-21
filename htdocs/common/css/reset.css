@@ -58,10 +58,12 @@ textarea{
 input[type="radio"]{
   display: none;
 }
-input[type="text"] {
+input[type="text"],
+input[type="submit"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border-radius: 0;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
