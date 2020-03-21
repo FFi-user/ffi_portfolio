@@ -7,6 +7,7 @@ $(function() {
   var winH = window.innerHeight;
   var humToggle = $(".sp_hum_toggle");
   var humLine = $(".sp_hum_line");
+  var humFixContent = $(".js_fixed_target_content");
 
   // ファーストビュー高さMAX
   $(".js_mv_height").css({height:winH});
@@ -109,19 +110,29 @@ $(function() {
       // 開閉時 ハンバーガーメニューの色を反転
       if ($(window).scrollTop() + 60 > winH && !$(this).hasClass(active)) {
         humColorDefault();
-      } else if($(window).scrollTop() + 60 > winH && $(this).hasClass(active)) {
+      } else if ($(window).scrollTop() + 60 > winH && $(this).hasClass(active)) {
         humColorChange();
       }
       $(this).toggleClass(active);
-      $(".js_fixed_target_content").toggleClass(active);
+      humFixContent.toggleClass(active);
     });
     $(".main_left_a").on('click', function() {
       // 開閉メニュークリック時は、mv下にしかスクロールされない。
-      if ($(window).scrollTop() + 60) {
+      if ($(window).scrollTop() + 60 > winH) {
         humColorChange();
       }
-      humToggle.removeClass(active);
-      $(".js_fixed_target_content").removeClass(active);
+      humClose();
+    });
+    // 開いている時に他の要素をクリック（orタッチ）したら閉じる
+    $(document).on("click touchend", function(e) {
+      if (humToggle.hasClass(active) && !$(e.target).closest(".js_fixed_target_content, .sp_hum_toggle").length) {
+        if ($(window).scrollTop() + 60 > winH) {
+          humColorChange();
+        } else {
+          humColorDefault();
+        }
+        humClose();
+      }
     });
   }
 
@@ -141,6 +152,10 @@ $(function() {
     humLine.css({
       "background-color": "#333"
     });
+  }
+  function humClose() {
+    humToggle.removeClass(active);
+    humFixContent.removeClass(active);
   }
 });
 
