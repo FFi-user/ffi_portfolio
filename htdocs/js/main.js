@@ -125,7 +125,7 @@ $(function() {
     });
     // 開いている時に他の要素をクリック（orタッチ）したら閉じる
     $(document).on("click touchend", function(e) {
-      if (humToggle.hasClass(active) && !$(e.target).closest(".js_fixed_target_content, .sp_hum_toggle").length) {
+      if (humToggle.hasClass(active) && !$(e.target).closest(".sp_hum_toggle").length) {
         if ($(window).scrollTop() + 60 > winH) {
           humColorChange();
         } else {
