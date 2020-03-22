@@ -22,6 +22,24 @@
     transform: translateY(0) rotate(90deg)
   }
 }
+// 横にブルブルさせるアニメーション
+@keyframes LeftAndRight {
+  0% {
+    transform: translateX(0)
+  }
+  25% {
+    transform: translateX(-10px)
+  }
+  50% {
+    transform: translateX(0px)
+  }
+  75% {
+    transform: translateX(10px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
 
 // header
 @import "../include/header";
@@ -594,6 +612,13 @@
     width: 392px;
     max-width: 100%;
     margin: 60px auto 0;
+    &.target {
+      opacity: 1;
+      &.is-animation {
+        animation: LeftAndRight .5s linear;
+        animation-iteration-count: 2;
+      }
+    }
   }
   &_p {
     margin-top: 60px;
