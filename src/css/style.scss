@@ -123,18 +123,18 @@
     left: 0;
     transform: rotate(0deg);
     &.no2 {
-      transform: rotate(-90deg);
+      transform: rotate(90deg);
       transition: transform 2s ease-in;
     }
     &.no3 {
-      transform: rotate(-135deg);
+      transform: rotate(135deg);
       transition: transform 2.2s ease-in;
     }
     &.no2.is-active {
-      transform: rotate(45deg);
+      transform: rotate(0);
     }
     &.no3.is-active {
-      transform: rotate(67.5deg);
+      transform: rotate(0);
     }
   }
 }

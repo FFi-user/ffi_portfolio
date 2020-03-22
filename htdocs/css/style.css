@@ -120,29 +120,29 @@
 }
 
 .mv_ani.no2 {
-	-webkit-transform: rotate(-90deg);
-	        transform: rotate(-90deg);
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
 	transition: -webkit-transform 2s ease-in;
 	transition: transform 2s ease-in;
 	transition: transform 2s ease-in, -webkit-transform 2s ease-in;
 }
 
 .mv_ani.no3 {
-	-webkit-transform: rotate(-135deg);
-	        transform: rotate(-135deg);
+	-webkit-transform: rotate(135deg);
+	        transform: rotate(135deg);
 	transition: -webkit-transform 2.2s ease-in;
 	transition: transform 2.2s ease-in;
 	transition: transform 2.2s ease-in, -webkit-transform 2.2s ease-in;
 }
 
 .mv_ani.no2.is-active {
-	-webkit-transform: rotate(45deg);
-	        transform: rotate(45deg);
+	-webkit-transform: rotate(0);
+	        transform: rotate(0);
 }
 
 .mv_ani.no3.is-active {
-	-webkit-transform: rotate(67.5deg);
-	        transform: rotate(67.5deg);
+	-webkit-transform: rotate(0);
+	        transform: rotate(0);
 }
 
 .sp_hum_toggle {
