@@ -2,7 +2,41 @@
 @import "../include/header";
 
 // content
-
+.main_wrap{
+    width: 1100px;
+    margin: auto;
+    padding-top: 50px;
+    position: relative;
+    .left_con{
+        width: 30%;
+        background: red;
+        float: left;
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: 0;
+            .logo{
+                margin: auto;
+                width: 50%;
+            }
+    }
+    .right_con{
+        width: 70%;
+        height: 1500px;
+        background: blue;
+        float: right;
+            h2{
+                width: 150px;
+                padding: 4rem;
+                margin: auto;
+                text-align: center;
+                border: 1px solid black;
+                }
+            .text{
+                text-align: center;
+            }
+    }
+}
 
 // footer
 @import "../include/footer";

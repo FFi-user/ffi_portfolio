@@ -2,6 +2,55 @@
 	display: block;
 }
 
+.header .eye_catch {
+	background-image: url(../img/eye_catch.jpg);
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+}
+
+.main_wrap {
+	width: 1100px;
+	margin: auto;
+	padding-top: 50px;
+	position: relative;
+}
+
+.main_wrap .left_con {
+	width: 30%;
+	background: red;
+	float: left;
+	position: relative;
+	top: auto;
+	bottom: auto;
+	left: 0;
+}
+
+.main_wrap .left_con .logo {
+	margin: auto;
+	width: 50%;
+}
+
+.main_wrap .right_con {
+	width: 70%;
+	height: 1500px;
+	background: blue;
+	float: right;
+}
+
+.main_wrap .right_con h2 {
+	width: 150px;
+	padding: 40px;
+	padding: 4rem;
+	margin: auto;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.main_wrap .right_con .text {
+	text-align: center;
+}
+
 .footer {
 	display: block;
 }
