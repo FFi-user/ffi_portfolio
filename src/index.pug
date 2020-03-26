@@ -15,20 +15,134 @@ block contents
         img(src="./img/ffi.png", alt="")
         nav
           ul
-            li FFiとは
-            li メンバー
-            li 過去作品
-            li ご依頼について
-            li お問い合わせ
-            li 制作メンバー求む!
+            li: a(href="#") FFiとは
+            li: a(href="#") メンバー
+            li: a(href="#") 過去作品
+            li: a(href="#") ご依頼について
+            li: a(href="#") お問い合わせ
+            li: a(href="#") 制作メンバー求む!
+
     div.right_con
-      h2 FFi<br>とは？
-      p.text
-      |    “FFi”とはFreelance Front-end innovation(フリーランス・フロントエンド・イノベーション)の略。<br>
-      |    “個人で自由に動き回るフロントエンドエンジニア”を志す若手技術者のチームです。<br>
-      |    - 2019年秋 -<br>
-      |    クリエイティブで向上心旺盛なメンバーが集い、コミュニティとして発足。<br>
-      |    - 2020年正月 -<br>
-      |    「それぞれの得意分野が異なるメンバー同士で補完し合い、仕事したら…<br>
-      |    色んな方からのホームページ制作のご依頼やご要望を満たすことができるのでは？」<br>
-      |    そんな動機で、会社のようだけど会社ではない、ひとつのチームとして走り始めました。
+      section.ffi
+        h2.title FFi<br>とは？
+        p.text
+          | “FFi”とはFreelance Front-end innovation(フリーランス・フロントエンド・イノベーション)の略。<br>
+          | “個人で自由に動き回るフロントエンドエンジニア”を志す若手技術者のチームです。<br>
+          | - 2019年秋 -<br>
+          | クリエイティブで向上心旺盛なメンバーが集い、コミュニティとして発足。<br>
+          | - 2020年正月 -<br>
+          | 「それぞれの得意分野が異なるメンバー同士で補完し合い、仕事したら…<br>
+          | 色んな方からのホームページ制作のご依頼やご要望を満たすことができるのでは？」<br>
+          | そんな動機で、会社のようだけど会社ではない、ひとつのチームとして走り始めました。
+        div.contents
+            .left_item.bl
+                h3.item1.bb WEBデザイン
+                p.item1_text1 なんとなくのデザインからの卒業。<br>
+                  | お客様とのやり取りから真のニーズを洗い出します。<br>また、
+                  | デザインの理論や知識を踏まえ、<br>
+                  | 目的達成を見据えたWebデザインを制作を致します。
+                p.item1_text1 使用ツール：<br>
+                  | Photoshop, Illustrator, XD,Animate, FireAlpaca ...etc.<br>
+                  | (今後さらに増えていきます)
+            .right_item.bl
+                h3.item2.bb コーディング
+                p.item2_text2 ホームページの制作を得意としています。<br>
+                  | 「検索したら上の方に出てくる<br>
+                  |  ランディング・ページを作りたい」<br>
+                  | 「WordPressを使ったサイトがいい」<br>
+                  | 「魅力的なアニメーションを…」など、<br>
+                  |  まずは何でもご相談下さい。<br>
+                p.item2_text2
+                  |  スキルセット：<br>
+                  |  HTML, CSS, JavaScript, PHP, Sass,<br>
+                  |  Pug, Bootstrap, jQuery, gulp ...etc.<br>(今後さらに増えていきます)
+      section.member
+        h2.title メンバー
+        div.member_item
+          .people
+            div.icon
+              img(src="", alt="")
+            p.name ここに名前
+            p.introduce ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+          .people
+            div.icon
+              img(src="", alt="")
+            p.name ここに名前
+            p.introduce ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+          .people
+            div.icon
+              img(src="", alt="")
+            p.name ここに名前
+            p.introduce ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+          .people
+            div.icon
+              img(src="", alt="")
+            p.name ここに名前
+            p.introduce ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+          .people
+            div.icon
+              img(src="", alt="")
+            p.name ここに名前
+            p.introduce ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+
+      section.work
+        h2.title 過去作品
+        .img_box
+          img(src="./img/icon_past_works.png", alt="")
+          p 申し訳御座いません。只今準備中です。
+      
+      section.offer
+        h2.title ご依頼<br>について
+        p.text Webデザインからコーディング、Webデザインのみ、コーディングのみのどれでも承ります。<br>
+          |  ご依頼内容の参考価格、最低価格は以下をご覧ください。<br>
+          |  まだ駆け出したばかりのチームですので、
+          span.line_b 相場より安いこの価格は今だけです！
+        div.price_wrap
+          div.price_box
+            div.price_name コーディング
+            div.data_box
+              p.name トップページ
+              p.price ¥30,000-
+            div.data_box
+              p.name 下層ページ
+              p.price ¥8,000-
+            div.data_box
+              p.name ランディングページ
+              p.price ¥40,000-
+            div.data_box
+              p.name レスポンシブ化
+              p.price ¥80,000-
+
+          div.price_box
+            div.price_name Webデザイン
+            div.data_box
+              p.name トップページ
+              p.price ¥70,000-
+            div.data_box
+              p.name 下層ページ
+              p.price ¥15,000-
+            div.data_box
+              p.name ランディングページ
+              p.price ¥80,000-
+
+          div.price_box
+            div.price_name 画像編集・加工等
+            div.data_box
+              p.name バナー制作
+              p.price ¥6,000-
+            div.data_box
+              p.name ロゴ制作
+              p.price ¥5,000-
+            div.data_box
+              p.name 画像編集・加工
+              p.price ¥6,000-
+
+      section.mail
+        h2.title お問い合わせ
+        form(action="")
+          label(for="elmId021") test021
+          input#elmId021(type="radio" name="test02" value="test021" checked=false)　
+            
+          label(for="elmId022") test022
+          input#elmId022(type="radio" name="test02" value="test022" checked=true)
+            

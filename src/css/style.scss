@@ -3,38 +3,187 @@
 
 // content
 .main_wrap{
+    overflow: hidden;
     width: 1100px;
     margin: auto;
     padding-top: 50px;
     position: relative;
     .left_con{
-        width: 30%;
-        background: red;
+        width: 25%;
         float: left;
-        position: relative;
-        top: auto;
-        bottom: auto;
-        left: 0;
             .logo{
                 margin: auto;
                 width: 50%;
             }
+
+            nav{
+                li{
+                    margin: 5rem 0;
+                    a{
+                        font-size: 2rem;
+                    }
+                }
+            }
     }
     .right_con{
-        width: 70%;
-        height: 1500px;
-        background: blue;
+        width: 75%;
         float: right;
-            h2{
-                width: 150px;
-                padding: 4rem;
-                margin: auto;
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto 50px;
                 text-align: center;
                 border: 1px solid black;
                 }
             .text{
                 text-align: center;
+                line-height: 36px;
             }
+            
+            .contents{
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-around;
+                    .bb{
+                        position: relative;
+                            &:before{
+                                content: '';
+                                width: 347px;
+                                height: 2px;
+                                background: #333;
+                                position: absolute;
+                                bottom: 0;
+                                left: -30px;
+                                // transition: width .6s;
+                            }
+                            &:after{
+                                content: '';
+                                width: 27px;
+                                height: 2px;
+                                background: #333;
+                                transform: rotate(45deg);
+                                position: absolute;
+                                right: -20px;
+                                bottom: 10.5px;
+                                // transition: width .6s;
+                                // transition-delay: .6s;
+                            }
+                        
+                        
+                    }
+                    .bl{
+                        position: relative;
+                        &:before{
+                            content: '';
+                            width: 2px;
+                            height: 100%;
+                            background: black;
+                            position: absolute;
+                            top: 0;
+                            left: 10px;
+                        }
+                    }
+                    .left_item{
+                        width: 40%;
+                        line-height: 36px;
+                        font-size: 1.5rem;
+                        padding-top: 10px;
+                        padding-left: 30px;
+                    }
+                    .right_item{
+                        width: 40%;
+                        line-height: 36px;
+                        font-size: 1.5rem;
+                        padding-top: 10px;
+                        padding-left: 30px;
+                    }
+            }
+        
+        .member{
+            &_item{
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 5rem;
+                
+                .people{
+                    width: 33%;
+                    .icon{
+                        width: 150px;
+                        height: 150px;
+                        margin: auto;
+                        border: 1px solid #000;
+                        border-radius: 50%;
+                    }
+                    .name{
+                        padding: 20px 0 10px;
+                        text-align: center;
+                        border-bottom: 5px solid blue;
+                        width: 50%;
+                        margin: auto;
+                    }
+                    .introduce{
+                        padding: 10px;
+                        
+                    }
+                }
+                
+            }
+        }
+
+        .work{
+            .img_box{
+                text-align: center;
+                img{width: 50%;}
+                p{  margin-top: 2rem;
+                    margin-bottom: 5rem;
+                    font-size: 3rem;}
+            }
+            
+        }
+
+        .offer{
+            .line_b{
+                border-bottom: 5px solid blue;
+                padding-bottom: 5px;
+            }
+            .text{
+                text-align: center;
+            }
+            .price_wrap{
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 5rem;
+
+                .price_box{
+                    width: 30%;
+                    .price_name{
+                        margin-top: 5rem;
+                        background: black;
+                        color: white;
+                        padding: 2rem;
+                        text-align: center;
+                        font-size: 2rem;
+                    }
+                    .data_box{
+                        overflow: hidden;
+                        padding: 1rem 0;
+                        border-bottom: 1px solid black;
+                        .name{float: left;}
+                        .price{float: right;}
+                    }
+                }
+            }
+            
+        }
+
+        .maill{
+            
+        }
     }
 }
 
