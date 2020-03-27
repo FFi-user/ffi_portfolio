@@ -230,6 +230,68 @@
 	float: right;
 }
 
+.main_wrap .right_con .form .form_tabel {
+	overflow: hidden;
+}
+
+.main_wrap .right_con .form .form_tabel .con1 {
+	float: left;
+	width: 23%;
+	margin: 10px 0;
+	padding: 20px;
+	padding: 2rem;
+	background: #000;
+	color: #fff;
+	text-align: center;
+}
+
+.main_wrap .right_con .form .form_tabel .con2 {
+	width: 75%;
+	margin: 10px 0;
+	border: 1px solid black;
+	border-radius: 5px;
+	float: right;
+	padding: 25px 0;
+	padding: 2.5rem 0;
+}
+
+.main_wrap .right_con .form .form_tabel .con2::-webkit-input-placeholder {
+	color: rgba(131, 128, 128, 0.527);
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+.main_wrap .right_con .form .form_tabel .con2:-ms-input-placeholder {
+	color: rgba(131, 128, 128, 0.527);
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+.main_wrap .right_con .form .form_tabel .con2::placeholder {
+	color: rgba(131, 128, 128, 0.527);
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+.main_wrap .right_con .form .form_tabel input[type=submit] {
+	display: block;
+	padding: 25px 0;
+	padding: 2.5rem 0;
+	margin: 100px auto;
+	border: none;
+	width: 30%;
+	text-align: center;
+	font-size: 15px;
+	font-size: 1.5rem;
+	color: #fff;
+	background-color: #000;
+	cursor: pointer;
+}
+
+.main_wrap .right_con .recruit p {
+	text-align: center;
+}
+
 .footer {
 	display: block;
 }

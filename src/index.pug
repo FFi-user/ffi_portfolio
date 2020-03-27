@@ -137,12 +137,33 @@ block contents
               p.name 画像編集・加工
               p.price ¥6,000-
 
-      section.mail
+      section.form
         h2.title お問い合わせ
-        form(action="")
-          label(for="elmId021") test021
-          input#elmId021(type="radio" name="test02" value="test021" checked=false)　
+        form(action="post")
+          div.form_box
+            div.form_tabel
+              label(for="title").con1 お問い合わせ内容
+              input(type="radio" ,id="title").con2
+            div.form_tabel
+              label(for="company").con1 貴社名
+              input(type="text"　,placeholder="(例)xxx株式会社" , id="company").con2
+            div.form_tabel
+              label(for="name").con1 お名前
+              input(type="text"　,placeholder="(例)山田　太郎", id="name").con2
+            div.form_tabel
+              label(for="mail").con1 メールアドレス
+              input(type="email"　,placeholder="(例)xxx@gmal.com" , id="mail").con2
+            div.form_tabel
+              label(for="text").con1 メッセージ
+              input(type="text" , placeholder="お問い合わせ内容" , id="text").con2
+              input(type="submit").submit
             
-          label(for="elmId022") test022
-          input#elmId022(type="radio" name="test02" value="test022" checked=true)
-            
+      section.recruit
+        h2.title 制作メンバー<br>募集中
+        p フリーランス志向のWebデザイナー/フロントエンドエンジニア/マークアップエンジニアの方で、
+          | 助け合いながら一緒に案件こなしたり、もくもく会(大体渋谷で開催)で<br>
+          | ワイワイ切磋琢磨できるチームメンバーを1～2名募集中です！<br>
+          | クリエイティブ、自主性がある、積極的な参加・発言・行動が可能、柔軟で多面的な思考ができる、<br>
+          | コーディング・Webデザイン以外の個人活動に必要な知識の吸収もする、攻撃的な発言はしない…<br>
+          | そんな感じのメンバーを探しています。(当チームはそういうメンバーで構成されています！)<br>
+          | 詳細はお問い合わせ下さい。

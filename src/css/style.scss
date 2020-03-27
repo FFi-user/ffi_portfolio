@@ -181,8 +181,49 @@
             
         }
 
-        .maill{
-            
+        .form{
+            .form_tabel{
+                overflow: hidden;
+                    .con1{
+                        float: left;
+                        width: 23%;
+                        margin: 10px 0;
+                        padding: 2rem;
+                        background: #000;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    .con2{
+                        width: 75%;
+                        margin: 10px 0;
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        float: right;
+                        padding: 2.5rem 0;
+                        
+                        &::placeholder{
+                            color: rgba(131, 128, 128, 0.527);
+                            font-size: 1.5rem;
+                        }
+                    }
+                    input[type=submit]{
+                        display: block;
+                        padding: 2.5rem 0;
+                        margin: 100px auto;
+                        border: none;
+                        width: 30%;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        color: #fff;
+                        background-color: #000;
+                        cursor:pointer;
+                    }
+            }
+        }
+        .recruit{
+            p{
+                text-align: center;
+            }
         }
     }
 }
