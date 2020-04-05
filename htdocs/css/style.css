@@ -452,6 +452,11 @@
 	line-height: 1.6;
 }
 
+.member_wrap_panel_a {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
 .past_works_img {
 	width: 392px;
 	max-width: 100%;
