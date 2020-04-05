@@ -120,6 +120,7 @@
 }
 
 .mv_ani.no2 {
+	border: 2px solid #fff;
 	-webkit-transform: rotate(90deg);
 	        transform: rotate(90deg);
 	transition: -webkit-transform 2s ease-in;
@@ -128,6 +129,7 @@
 }
 
 .mv_ani.no3 {
+	border: 3px solid #fff;
 	-webkit-transform: rotate(135deg);
 	        transform: rotate(135deg);
 	transition: -webkit-transform 2.2s ease-in;

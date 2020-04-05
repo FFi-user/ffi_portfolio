@@ -141,10 +141,12 @@
     left: 0;
     transform: rotate(0deg);
     &.no2 {
+      border: 2px solid #fff;
       transform: rotate(90deg);
       transition: transform 2s ease-in;
     }
     &.no3 {
+      border: 3px solid #fff;
       transform: rotate(135deg);
       transition: transform 2.2s ease-in;
     }
