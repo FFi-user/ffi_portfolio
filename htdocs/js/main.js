@@ -40,10 +40,6 @@ $(function() {
     var target = $(".target"); //表示非表示の対象
     var isAnimation = "is-animation"; //表示クラスの付与用
 
-    var docH = $(document).innerHeight(); //ページ全体の高さ
-    var winH = $(window).innerHeight(); //ウィンドウの高さ
-    var bottomPos = docH - winH; //ページ全体の高さ - ウィンドウの高さ = ページの最下部位置
-
     // 画面真ん中でアニメーション発火
     target.each(function() {
       var targetOffset = $(this).offset().top; //対象の高さ
@@ -53,9 +49,6 @@ $(function() {
       // 処理のタイミング
       if (scrollPos > targetOffset - wHeight + wHeight / 3) {
         $(this).addClass(isAnimation);
-      // 最後の要素が発火タイミングに入らない場合は最下部までスクロールで強制発火
-      } else if (bottomPos <= $(window).scrollTop()) {
-        target.last().addClass(isAnimation);
       }
     });
 

@@ -159,7 +159,7 @@
 	-ms-flex-align: start;
 	    align-items: flex-start;
 	width: 1100px;
-	margin: 60px auto 0;
+	margin: 60px auto 150px;
 	position: relative;
 }
 
@@ -740,7 +740,7 @@
 	height: 30px;
 	border-bottom: 2px solid #333;
 	position: absolute;
-	top: 0;
+	top: -100px;
 	right: 0;
 	-webkit-transform: rotate(90deg);
 	        transform: rotate(90deg);
@@ -856,7 +856,7 @@ body {
 .main {
 	display: block;
 	width: 100%;
-	margin: 30px auto 0;
+	margin: 30px auto 70px;
 	padding: 0 15px;
 }
 
@@ -1094,6 +1094,7 @@ body {
 .page_top {
 	width: 70px;
 	height: 15px;
+	top: -45px;
 	right: -20px;
 }
 

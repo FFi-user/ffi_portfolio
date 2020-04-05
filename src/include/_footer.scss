@@ -48,7 +48,7 @@
   height: 30px;
   border-bottom: 2px solid #333;
   position: absolute;
-  top: 0;
+  top: -100px;
   right: 0;
   transform: rotate(90deg);
   animation: upDownArw 1.2s linear infinite;
@@ -68,6 +68,7 @@
   .page_top {
     width: 70px;
     height: 15px;
+    top: -45px;
     right: -20px;
     &::before {
       width: 15px;
