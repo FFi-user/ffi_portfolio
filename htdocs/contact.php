@@ -17,13 +17,25 @@ $request_method = post_request_method();
         $email = post_data('email');
         $other_text = post_data('other_text');
         $to = 'chihiro.n.9240@gmail.com';
+        $from ='FFiお問い合わせフォーム';
+        $from_mail = 'noreplay@ip-172-31-15-199.ap-northeast-1.compute.internal';
+        $from_name ='FFiお問い合わせフォーム';
 
         mb_language("Japanese");
         mb_internal_encoding("UTF-8");
 
         $massage = '会社名：' . $company_name . '\n名前：' . $full_name . '\nメールアドレス：' . $email . '\nメッセージ：' . $other_text; 
+        $header = '';
+        $header .= "Content-Type: text/plain \r\n";
+        $header .= "Return-Path: " . $from_mail . " \r\n";
+        $header .= "From: " . $from ." \r\n";
+        $header .= "Sender: " . $from ." \r\n";
+        $header .= "Reply-To: " . $from_mail . " \r\n";
+        $header .= "Organization: " . $from_name . " \r\n";
+        $header .= "X-Sender: " . $from_mail . " \r\n";
+        $header .= "X-Priority: 3 \r\n";
 
-        if(!mb_send_mail($to, $contact_detail, $massage)) {
+        if(!mb_send_mail($to, $contact_detail, $massage, $header)) {
             $error[] = 'メールを送信できませんでした。\nお手数ですが、TOPに戻り再度送信いただきますようお願いいたします。';
         };
 
