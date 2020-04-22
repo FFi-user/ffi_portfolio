@@ -40,7 +40,6 @@ $request_method = post_request_method();
         };
 
     }
-    
 // view読み込み
 include_once (dirname(__FILE__) .'/view_contact.php');
 ?>
