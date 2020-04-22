@@ -16,9 +16,9 @@ $request_method = post_request_method();
         $full_name = post_data('full_name');
         $email = post_data('email');
         $other_text = post_data('other_text');
-        $to = 'chihiro.n.9240@gmail.com';
+        $to = 'ffi-shibuya@gmail.com';
         $from ='FFiお問い合わせフォーム';
-        $from_mail = 'noreplay@ip-172-31-15-199.ap-northeast-1.compute.internal';
+        $from_mail = 'info@ffi-shibuya.com';
         $from_name ='FFiお問い合わせフォーム';
 
         mb_language("Japanese");
