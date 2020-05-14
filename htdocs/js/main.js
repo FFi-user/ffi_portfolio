@@ -149,6 +149,26 @@ $(function() {
     humToggle.removeClass(active);
     humFixContent.removeClass(active);
   }
+
+  // お問い合わせフォーム未入力防止
+  $(".form_submit_btn").on("click", function() {
+    var inputCompanyName = $("input[name='company_name']");
+    var inputFullName = $("input[name='full_name']");
+    var inputEmail = $("input[name='email']");
+    var textAreaOtherText = $("textarea[name='other_text']");
+
+    if(formCheck(inputCompanyName,"貴社名") == false){return false;}
+    if(formCheck(inputFullName,"お名前") == false){return false;}
+    if(formCheck(inputEmail,"メールアドレス") == false){return false;}
+    if(formCheck(textAreaOtherText,"メッセージ") == false){return false;}
+  });
+
+  function formCheck(target,comment) {
+    if(target.val() == "") {
+      alert(comment + "が記入されていません。");
+      return false;
+    }
+  }
 });
 
 $(window).on("load", function() {
