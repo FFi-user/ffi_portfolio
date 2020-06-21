@@ -157,7 +157,7 @@ $(function() {
     var inputEmail = $("input[name='email']");
     var textAreaOtherText = $("textarea[name='other_text']");
 
-    if(formCheck(inputCompanyName,"貴社名") == false){return false;}
+    // if(formCheck(inputCompanyName,"貴社名") == false){return false;}
     if(formCheck(inputFullName,"お名前") == false){return false;}
     if(formCheck(inputEmail,"メールアドレス") == false){return false;}
     if(formCheck(textAreaOtherText,"メッセージ") == false){return false;}
